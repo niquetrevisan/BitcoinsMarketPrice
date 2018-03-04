@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="cEN-ni-ato">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="pw3-lv-jba">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,10 +10,26 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="0dC-Hm-B2z">
+            <objects>
+                <navigationController id="pw3-lv-jba" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ldX-KR-GgI">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="no8-0j-UnL" kind="relationship" relationship="rootViewController" id="ff1-ey-nzm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XFH-KZ-wvg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-610" y="-424"/>
+        </scene>
         <!--Lista-->
         <scene sceneID="nXG-1E-I9K">
             <objects>
-                <viewController id="no8-0j-UnL" customClass="ChartViewController" customModule="BitcoinMarketPrice" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="no8-0j-UnL" customClass="MarketPriceViewController" customModule="BitcoinMarketPrice" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bcf-g2-Zxs"/>
                         <viewControllerLayoutGuide type="bottom" id="Gon-Jg-437"/>
@@ -23,32 +39,40 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Vy-pc-OkD">
-                                <rect key="frame" x="16" y="56" width="343" height="151"/>
-                                <color key="backgroundColor" red="0.8256152849740932" green="0.8256152849740932" blue="0.8256152849740932" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <rect key="frame" x="16" y="79" width="343" height="151"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cotação do dia" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0GG-k5-IWF">
+                                        <rect key="frame" x="104.5" y="13" width="135" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                        <color key="textColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Va-wH-JcZ">
+                                        <rect key="frame" x="140.5" y="69.5" width="62.5" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                        <color key="textColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="0GG-k5-IWF" firstAttribute="centerX" secondItem="3Vy-pc-OkD" secondAttribute="centerX" id="ILW-ch-2AO"/>
+                                    <constraint firstItem="5Va-wH-JcZ" firstAttribute="centerX" secondItem="3Vy-pc-OkD" secondAttribute="centerX" id="Wab-CK-qA4"/>
                                     <constraint firstAttribute="height" constant="151" id="YPx-ku-Ooy"/>
+                                    <constraint firstItem="0GG-k5-IWF" firstAttribute="top" secondItem="3Vy-pc-OkD" secondAttribute="top" constant="13" id="anN-CE-5xd"/>
+                                    <constraint firstItem="5Va-wH-JcZ" firstAttribute="top" secondItem="0GG-k5-IWF" secondAttribute="bottom" constant="32.5" id="m4l-dG-6XH"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nOt-lj-vS5" customClass="LineChartView" customModule="Charts">
-                                <rect key="frame" x="16" y="221" width="343" height="389"/>
-                                <color key="backgroundColor" red="0.92031654792746109" green="0.92031654792746109" blue="0.92031654792746109" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <rect key="frame" x="16" y="251" width="343" height="408"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jY4-Z8-L4d">
-                                <rect key="frame" x="16" y="10" width="343" height="38"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="38" id="AaE-W7-Z0Z"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="nOt-lj-vS5" firstAttribute="trailing" secondItem="c1s-S6-hFs" secondAttribute="trailingMargin" id="5uY-pZ-Dot"/>
-                            <constraint firstItem="nOt-lj-vS5" firstAttribute="top" secondItem="3Vy-pc-OkD" secondAttribute="bottom" constant="14" id="9ND-AI-qJx"/>
-                            <constraint firstItem="jY4-Z8-L4d" firstAttribute="top" secondItem="c1s-S6-hFs" secondAttribute="top" constant="10" id="BPU-Kb-V3Z"/>
-                            <constraint firstItem="jY4-Z8-L4d" firstAttribute="leading" secondItem="c1s-S6-hFs" secondAttribute="leading" constant="16" id="LUJ-od-uJg"/>
-                            <constraint firstItem="3Vy-pc-OkD" firstAttribute="top" secondItem="jY4-Z8-L4d" secondAttribute="bottom" constant="8" symbolic="YES" id="MTK-hb-u2N"/>
-                            <constraint firstAttribute="trailing" secondItem="jY4-Z8-L4d" secondAttribute="trailing" constant="16" id="XWT-Hy-lf2"/>
+                            <constraint firstItem="3Vy-pc-OkD" firstAttribute="top" secondItem="bcf-g2-Zxs" secondAttribute="bottom" constant="15" id="7nH-nU-PC6"/>
+                            <constraint firstItem="nOt-lj-vS5" firstAttribute="top" secondItem="3Vy-pc-OkD" secondAttribute="bottom" constant="21" id="9ND-AI-qJx"/>
                             <constraint firstItem="3Vy-pc-OkD" firstAttribute="trailing" secondItem="c1s-S6-hFs" secondAttribute="trailingMargin" id="ZUe-Lb-ek6"/>
                             <constraint firstItem="Gon-Jg-437" firstAttribute="top" secondItem="nOt-lj-vS5" secondAttribute="bottom" constant="8" id="cbF-Hg-e5B"/>
                             <constraint firstItem="nOt-lj-vS5" firstAttribute="leading" secondItem="c1s-S6-hFs" secondAttribute="leadingMargin" id="fCI-Up-xV3"/>
@@ -56,30 +80,15 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Lista" id="IuP-y9-8ss" userLabel="General"/>
+                    <navigationItem key="navigationItem" id="KUi-z9-bgH"/>
                     <connections>
+                        <outlet property="lbMarketPriceDay" destination="5Va-wH-JcZ" id="Obd-P9-jXM"/>
                         <outlet property="lineChartView" destination="nOt-lj-vS5" id="U2E-qN-6Kr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mXh-Dj-Yzv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="152.80000000000001" y="-421.43928035982015"/>
-        </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="BdF-La-FyK">
-            <objects>
-                <tabBarController id="cEN-ni-ato" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="j6x-Og-bmf">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="no8-0j-UnL" kind="relationship" relationship="viewControllers" id="l0r-T2-jBh"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pUf-3h-97P" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-799" y="-89"/>
+            <point key="canvasLocation" x="309.60000000000002" y="-424.13793103448279"/>
         </scene>
     </scenes>
 </document>

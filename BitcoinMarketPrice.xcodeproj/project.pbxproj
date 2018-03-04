@@ -8,10 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		2F10455412CAC817B11D3C03 /* Pods_BitcoinMarketPrice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55A5C621BD2306F62DA4ADF0 /* Pods_BitcoinMarketPrice.framework */; };
-		EE1431F5204A30230089AD33 /* ChartsDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1431F4204A30230089AD33 /* ChartsDataViewModel.swift */; };
-		EE1D3F4F204A1D4F00B63091 /* ChartsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1D3F4E204A1D4F00B63091 /* ChartsData.swift */; };
-		EE1D3F51204A218100B63091 /* ChartsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1D3F50204A218000B63091 /* ChartsProvider.swift */; };
-		EE79040B2044E20600C98877 /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7904082044E20600C98877 /* ChartViewController.swift */; };
+		EE1431F5204A30230089AD33 /* MarketPriceViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1431F4204A30230089AD33 /* MarketPriceViewControllerViewModel.swift */; };
+		EE1D3F51204A218100B63091 /* MarketPriceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1D3F50204A218000B63091 /* MarketPriceProvider.swift */; };
+		EE57698C204C26FD00A57A51 /* MarketPrice+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE576988204C26FC00A57A51 /* MarketPrice+CoreDataClass.swift */; };
+		EE57698D204C26FD00A57A51 /* Point+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE576989204C26FD00A57A51 /* Point+CoreDataClass.swift */; };
+		EE576991204C400F00A57A51 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE576990204C400F00A57A51 /* LoadingView.xib */; };
+		EE79040B2044E20600C98877 /* MarketPriceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7904082044E20600C98877 /* MarketPriceViewController.swift */; };
 		EEACD3F92044DF06006395EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEACD3F82044DF06006395EA /* AppDelegate.swift */; };
 		EEACD3FE2044DF06006395EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEACD3FC2044DF06006395EA /* Main.storyboard */; };
 		EEACD4012044DF06006395EA /* BitcoinMarketPrice.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EEACD3FF2044DF06006395EA /* BitcoinMarketPrice.xcdatamodeld */; };
@@ -23,10 +25,12 @@
 		067AB9132BF55601D76C9BF9 /* Pods-BitcoinMarketPrice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitcoinMarketPrice.release.xcconfig"; path = "Pods/Target Support Files/Pods-BitcoinMarketPrice/Pods-BitcoinMarketPrice.release.xcconfig"; sourceTree = "<group>"; };
 		13FC9139BBA32448FDAF19DB /* Pods-BitcoinMarketPrice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitcoinMarketPrice.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BitcoinMarketPrice/Pods-BitcoinMarketPrice.debug.xcconfig"; sourceTree = "<group>"; };
 		55A5C621BD2306F62DA4ADF0 /* Pods_BitcoinMarketPrice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitcoinMarketPrice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EE1431F4204A30230089AD33 /* ChartsDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsDataViewModel.swift; sourceTree = "<group>"; };
-		EE1D3F4E204A1D4F00B63091 /* ChartsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsData.swift; sourceTree = "<group>"; };
-		EE1D3F50204A218000B63091 /* ChartsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsProvider.swift; sourceTree = "<group>"; };
-		EE7904082044E20600C98877 /* ChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
+		EE1431F4204A30230089AD33 /* MarketPriceViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketPriceViewControllerViewModel.swift; sourceTree = "<group>"; };
+		EE1D3F50204A218000B63091 /* MarketPriceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketPriceProvider.swift; sourceTree = "<group>"; };
+		EE576988204C26FC00A57A51 /* MarketPrice+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "MarketPrice+CoreDataClass.swift"; path = "/Users/moniquetrevisan/Documents/Projects/BitcoinsMarketPrice/BitcoinMarketPrice/Classes/Models/MarketPrice+CoreDataClass.swift"; sourceTree = "<absolute>"; };
+		EE576989204C26FD00A57A51 /* Point+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Point+CoreDataClass.swift"; path = "/Users/moniquetrevisan/Documents/Projects/BitcoinsMarketPrice/BitcoinMarketPrice/Classes/Models/Point+CoreDataClass.swift"; sourceTree = "<absolute>"; };
+		EE576990204C400F00A57A51 /* LoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
+		EE7904082044E20600C98877 /* MarketPriceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarketPriceViewController.swift; sourceTree = "<group>"; };
 		EEACD3F52044DF06006395EA /* BitcoinMarketPrice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BitcoinMarketPrice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEACD3F82044DF06006395EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EEACD3FD2044DF06006395EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -82,8 +86,9 @@
 		EE7904062044E20600C98877 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				EE1D3F4E204A1D4F00B63091 /* ChartsData.swift */,
-				EE1D3F50204A218000B63091 /* ChartsProvider.swift */,
+				EE576988204C26FC00A57A51 /* MarketPrice+CoreDataClass.swift */,
+				EE576989204C26FD00A57A51 /* Point+CoreDataClass.swift */,
+				EE1D3F50204A218000B63091 /* MarketPriceProvider.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -91,7 +96,7 @@
 		EE7904072044E20600C98877 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				EE7904082044E20600C98877 /* ChartViewController.swift */,
+				EE7904082044E20600C98877 /* MarketPriceViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -99,7 +104,7 @@
 		EE7904092044E20600C98877 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				EE1431F4204A30230089AD33 /* ChartsDataViewModel.swift */,
+				EE1431F4204A30230089AD33 /* MarketPriceViewControllerViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -107,6 +112,7 @@
 		EE79040A2044E20600C98877 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				EE576990204C400F00A57A51 /* LoadingView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -211,6 +217,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EEACD4062044DF06006395EA /* LaunchScreen.storyboard in Resources */,
+				EE576991204C400F00A57A51 /* LoadingView.xib in Resources */,
 				EEACD4032044DF06006395EA /* Assets.xcassets in Resources */,
 				EEACD3FE2044DF06006395EA /* Main.storyboard in Resources */,
 			);
@@ -260,16 +267,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-BitcoinMarketPrice/Pods-BitcoinMarketPrice-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
-				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -283,12 +288,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE1D3F51204A218100B63091 /* ChartsProvider.swift in Sources */,
-				EE1431F5204A30230089AD33 /* ChartsDataViewModel.swift in Sources */,
-				EE79040B2044E20600C98877 /* ChartViewController.swift in Sources */,
+				EE1D3F51204A218100B63091 /* MarketPriceProvider.swift in Sources */,
+				EE1431F5204A30230089AD33 /* MarketPriceViewControllerViewModel.swift in Sources */,
+				EE57698D204C26FD00A57A51 /* Point+CoreDataClass.swift in Sources */,
+				EE79040B2044E20600C98877 /* MarketPriceViewController.swift in Sources */,
 				EEACD4012044DF06006395EA /* BitcoinMarketPrice.xcdatamodeld in Sources */,
-				EE1D3F4F204A1D4F00B63091 /* ChartsData.swift in Sources */,
 				EEACD3F92044DF06006395EA /* AppDelegate.swift in Sources */,
+				EE57698C204C26FD00A57A51 /* MarketPrice+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,11 +435,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 67Z4ZFF9QE;
 				INFOPLIST_FILE = BitcoinMarketPrice/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.nique.BitcoinMarketPrice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -446,11 +452,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 67Z4ZFF9QE;
 				INFOPLIST_FILE = BitcoinMarketPrice/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.nique.BitcoinMarketPrice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
