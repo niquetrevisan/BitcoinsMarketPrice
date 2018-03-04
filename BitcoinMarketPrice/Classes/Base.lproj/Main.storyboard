@@ -80,7 +80,13 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Lista" id="IuP-y9-8ss" userLabel="General"/>
-                    <navigationItem key="navigationItem" id="KUi-z9-bgH"/>
+                    <navigationItem key="navigationItem" id="KUi-z9-bgH">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="Mn7-Tw-V4g">
+                            <connections>
+                                <action selector="reloadDataServerWithSender:" destination="no8-0j-UnL" id="K2G-5O-c0Y"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="lbMarketPriceDay" destination="5Va-wH-JcZ" id="Obd-P9-jXM"/>
                         <outlet property="lineChartView" destination="nOt-lj-vS5" id="U2E-qN-6Kr"/>

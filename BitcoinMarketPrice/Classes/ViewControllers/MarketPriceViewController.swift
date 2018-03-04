@@ -18,27 +18,52 @@ class MarketPriceViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.loadingView = UIView.fromNib()
         self.marketPriceViewModel = MarketPriceViewModel()
-        self.view.addSubview(self.loadingView)
         self.loadChartData()
     }
 
     //MARK: Load method
     func loadChartData(){
-        
+        self.showLoadingView()
         self.marketPriceViewModel.getChartsData(successBlock: {
-            self.showChart()
             self.loadingView.removeFromSuperview()
+            self.showChart()
         }) { (error) in
             self.loadingView.removeFromSuperview()
+            let alert = UIAlertController(title: "Desculpe!", message: "Não foi possível carregar os dados.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert, animated: true)
         }
     }
 
+    //Apresentar dados no gráfico
     func showChart() {
         self.lbMarketPriceDay.text = self.marketPriceViewModel.getLastMarketPrice()
         self.marketPriceViewModel.configureLineChart(lineView: self.lineChartView)
     }
+    
+    func showLoadingView() {
+        if self.loadingView == nil {
+            self.loadingView = UIView.fromNib()
+        }
+        self.loadingView.frame = self.view.frame
+        self.view.addSubview(self.loadingView)
+    }
+    
+    @IBAction func reloadDataServer(sender: UIBarButtonItem) {
+        self.showLoadingView()
+        self.marketPriceViewModel.loadMarketPriceDataFromServer(successBlock: { (marketPrice) in
+            self.loadingView.removeFromSuperview()
+            self.showChart()
+        }) { (error) in
+            self.loadingView.removeFromSuperview()
+            let alert = UIAlertController(title: "Desculpe!", message: "Não foi possível carregar os dados.", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert, animated: true)
+            
+            }
+        }
 }
 
 extension UIView {
